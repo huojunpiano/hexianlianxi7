@@ -19,6 +19,16 @@
             color: white;
             font-size: 20px;
         }
+        .button1 {
+            width: 200px;
+            height: 100px;
+            margin: 2px; /* 将按钮的外边距缩小为 2 像素 */
+            border: none;
+            border-radius: 10px;
+            background-color: transparent;
+            color: white;
+            font-size: 20px;
+        }
         .box {
             width: 200px; /* 将方框的宽度增加为 200 像素 */
             height: 100px;
@@ -47,6 +57,9 @@
         /* 这是一个媒体查询，用于在屏幕宽度小于或等于 600 像素的设备上，设置不同的样式规则 */
         @media screen and (max-width: 600px) {
             .button {
+                width: 100px; /* 将按钮的宽度缩小为 100 像素 */
+            }
+            .button1 {
                 width: 100px; /* 将按钮的宽度缩小为 100 像素 */
             }
             .box {
@@ -117,6 +130,9 @@
 </head>
 <body>
     <div class="container">
+        <div class="row">
+            <button class="button1" onclick="displayContent(this);"></button>
+        </div>
         <div class="row">
             <button class="button" onclick="displayContent(this);">单音</button>
             <button class="button" onclick="displayContent(this);">简单和弦</button>
