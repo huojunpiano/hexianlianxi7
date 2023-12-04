@@ -64,12 +64,12 @@
         // 这是一个函数，用于在方框中显示随机的内容
         function displayContent(button) {
             // 这是一个对象，存放了每个按钮对应的内容数组
-            let contentMap = {
-                "单音": ["do", "re", "mi", "fa", "sol", "la", "si", "C", "D", "E", "F", "G", "A", "B", "C#", "D#", "F#"],
-                "简单和弦": ["C大三和弦", "D大三和弦", "E大三和弦"],
-                "转位和弦": ["C大三和弦根音转位", "C大三和弦第三音转位", "D大三和弦根音转位"],
-                "七和弦": ["C大七和弦", "D大七和弦", "E大七和弦"],
-                "混合": ["C小三和弦", "D减三和弦", "E半减七和弦"]
+             let contentMap = {
+                "单音": ["A", "B", "C", "D", "E", "F", "G", "A♯", "C♯", "D♯", "F♯", "G♯", "A♭", "B♭",  "D♭", "E♭",  "G♭" ],
+                "简单和弦": ["A", "B", "C", "D", "E", "F", "G", "Am", "Bm", "Cm", "Dm", "Em", "Fm", "Gm","A♯m", "C♯m", "D♯m", "F♯m", "G♯m", "A♭m", "B♭m",  "D♭m", "E♭m", "G♭m" ],
+                "转位和弦": ["A/C♯", "B/D♯", "C/E", "D/F♯", "E/G♯", "F/A", "G/B","A/E", "B/F♯", "C/G", "D/A", "E/B", "F/C", "G/D","Am/C", "Bm/D", "Cm/E♭", "Dm/F", "Em/G", "Fm/A♭", "Gm/B♭","Am/E", "Bm/F♯", "Cm/G", "Dm/A", "Em/B", "Fm/C", "Gm/D","A♯m/C♯", "C♯m/E", "D♯m/F♯", "F♯m/A", "G♯m/B","A♯m/F", "C♯m/G♯", "D♯m/A♯", "F♯m/C♯", "G♯m/D♯","A♭m/B", "B♭m/D♭", "D♭m/E", "E♭m/G♭", "G♭m/A","A♭m/E♭", "B♭m/F", "D♭m/A♭", "E♭m/B♭", "G♭m/D♭"],
+                "七和弦": ["A7", "B7", "C7", "D7", "E7", "F7", "G7", "Am7", "Bm7", "Cm7", "Dm7", "Em7", "Fm7", "Gm7","A♯m7", "C♯m7", "D♯m7", "F♯m7", "G♯m7", "A♭m7", "B♭m7",  "D♭m7", "E♭m7", "G♭m7"],
+                "混合": ["单音A", "单音B", "单音C", "单音D", "单音E", "单音F", "单音G", "单音A♯", "单音C♯", "单音D♯", "单音F♯", "单音G♯", "单音A♭", "单音B♭",  "单音D♭", "单音E♭",  "单音G♭","A", "B", "C", "D", "E", "F", "G", "Am", "Bm", "Cm", "Dm", "Em", "Fm", "Gm","A♯m", "C♯m", "D♯m", "F♯m", "G♯m", "A♭m", "B♭m",  "D♭m", "E♭m", "G♭m","A/C♯", "B/D♯", "C/E", "D/F♯", "E/G♯", "F/A", "G/B","A/E", "B/F♯", "C/G", "D/A", "E/B", "F/C", "G/D","Am/C", "Bm/D", "Cm/E♭", "Dm/F", "Em/G", "Fm/A♭", "Gm/B♭","Am/E", "Bm/F♯", "Cm/G", "Dm/A", "Em/B", "Fm/C", "Gm/D","A♯m/C♯", "C♯m/E", "D♯m/F♯", "F♯m/A", "G♯m/B","A♯m/F", "C♯m/G♯", "D♯m/A♯", "F♯m/C♯", "G♯m/D♯","A♭m/B", "B♭m/D♭", "D♭m/E", "E♭m/G♭", "G♭m/A","A♭m/E♭", "B♭m/F", "D♭m/A♭", "E♭m/B♭", "G♭m/D♭","A7", "B7", "C7", "D7", "E7", "F7", "G7", "Am7", "Bm7", "Cm7", "Dm7", "Em7", "Fm7", "Gm7","A♯m7", "C♯m7", "D♯m7", "F♯m7", "G♯m7", "A♭m7", "B♭m7",  "D♭m7", "E♭m7", "G♭m7"]
             };
             // 这是一个变量，存放了点击的按钮的文本
             let buttonText = button.innerHTML;
